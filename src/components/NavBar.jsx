@@ -19,7 +19,7 @@ const NavBar = () => {
           <Link to="/about" className="hover:text-gray-500 transition">About</Link>
           <Link to="/projects" className="hover:text-gray-500 transition">Projects</Link>
           <Link to="/contact" className="hover:text-gray-500 transition">Contact</Link>
-          <Link to="/team" className="hover:text-gray-500 transition">Our Team</Link>
+          {/* <Link to="/team" className="hover:text-gray-500 transition">Our Team</Link> */}
         </div>
 
         {/* Mobile Menu Button */}
