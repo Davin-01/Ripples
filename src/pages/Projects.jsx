@@ -7,7 +7,7 @@ const projects = [
   {
     name: "Project Alpha",
     description: "A cutting-edge web application for real-time collaboration and data analytics.",
-    image: pic1, // Update with actual image path
+    image: pic1,
     link: "/projects/alpha",
   },
   {
@@ -28,28 +28,16 @@ const projects = [
     image: pic1,
     link: "/projects/delta",
   },
-  {
-    name: "Project Delta",
-    description: "A mobile app designed to help users improve their productivity and time management.",
-    image: pic1,
-    link: "/projects/delta",
-  },
-  {
-    name: "Project Delta",
-    description: "A mobile app designed to help users improve their productivity and time management.",
-    image: pic1,
-    link: "/projects/delta",
-  },
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="bg-black text-white min-h-screen pt-16">
+    <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen pt-16">
       {/* Centered Container */}
       <div className="container mx-auto px-6">
         {/* Projects Section */}
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-blue-500">Our Projects</h1>
+          <h1 className="text-4xl font-bold text-teal-400">Our Projects</h1>
           <p className="mt-4 text-gray-300">
             We are proud to showcase the projects we've worked on, each representing our passion and dedication.
           </p>
@@ -59,14 +47,14 @@ export default function ProjectsPage() {
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div key={index} whileHover={{ scale: 1.05 }}>
-              <Card className="bg-gray-900 text-white rounded-2xl shadow-lg overflow-hidden">
-                <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
+              <Card className="bg-gray-800 text-white rounded-2xl shadow-lg overflow-hidden">
+                <img src={project.image} alt={project.name} className="w-full h-48 object-cover rounded-t-2xl" />
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-blue-400">{project.name}</h3>
+                  <h3 className="text-xl font-semibold text-teal-300">{project.name}</h3>
                   <p className="text-gray-400">{project.description}</p>
                   <Button
-                    className="mt-4 text-blue-500"
-                    onclick={() => window.Location.href = project.link}
+                    className="mt-4 text-teal-500 hover:bg-teal-500 hover:text-white transition"
+                    onClick={() => window.location.href = project.link}
                   >
                     Learn More
                   </Button>
@@ -77,7 +65,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-blue-500 text-white py-4 mt-16">
+        <footer className="bg-teal-500 text-white py-4 mt-16">
           <div className="container mx-auto text-center">
             <p className="text-sm">&copy; 2025 Team Devs. All Rights Reserved.</p>
             <div className="mt-2">
